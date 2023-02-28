@@ -12,7 +12,7 @@ margin_bottom = 40.0
 [node name="Label" type="Label" parent="UI_Element"]
 margin_right = 40.0
 margin_bottom = 14.0
-text = "Dord."
+text = "The quick brown fox jumps over the lazy dog."
 
 [node name="VideoPlayer" type="VideoPlayer" parent="UI_Element"]
 anchor_right = 0.645
