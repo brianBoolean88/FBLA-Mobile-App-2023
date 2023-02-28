@@ -13,3 +13,10 @@ margin_bottom = 40.0
 margin_right = 40.0
 margin_bottom = 14.0
 text = "this is a test text"
+
+[node name="VideoPlayer" type="VideoPlayer" parent="UI_Element"]
+anchor_right = 0.645
+anchor_bottom = 0.635
+margin_top = 29.0
+margin_right = 14.2
+margin_bottom = 14.6
