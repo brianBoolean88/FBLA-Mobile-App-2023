@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
-"path": "res://godot-git-plugin-v2.1.0/godot-git-plugin-v2.1.0/addons/godot-git-plugin/git_api.gdns"
+"path": "res://addons/godot-git-plugin/git_api.gdns"
 } ]
 _global_script_class_icons={
 "GitAPI": ""
@@ -22,6 +22,11 @@ _global_script_class_icons={
 
 config/name="FBLA Mobile App"
 config/icon="res://icon.png"
+
+[editor]
+
+version_control_autoload_on_startup=true
+version_control_plugin_name="GitAPI"
 
 [gui]
 
