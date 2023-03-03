@@ -8,16 +8,9 @@
 [sub_resource type="GradientTexture" id=4]
 gradient = SubResource( 3 )
 
-<<<<<<< HEAD
 [sub_resource type="DynamicFont" id=5]
 size = 32
 font_data = ExtResource( 1 )
-=======
-[node name="Label" type="Label" parent="UI_Element"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "The quick brown fox jumps over the lazy dog."
->>>>>>> b0d6f5ee160027ca54505d523540cae55fd0bc76
 
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 2 )
