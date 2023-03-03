@@ -21,12 +21,30 @@ _global_script_class_icons={
 [application]
 
 config/name="FBLA Mobile App"
+run/main_scene="res://WorldScene.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=576
+window/size/height=1024
+window/size/test_width=574
+window/size/test_height=1022
+window/handheld/orientation="portrait"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [editor]
 
 version_control_autoload_on_startup=true
 version_control_plugin_name="GitAPI"
+
+[global]
+
+pixel=false
+"pixel snap"=false
+window=false
+display=false
 
 [gui]
 
@@ -38,4 +56,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
