@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Link Button Texture.png-03d087daf55f64507c8c500870d749af.stex"
+path="res://.import/BG Borders Texture.png-bc1c1721512904ba37ea2ca69dd72155.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Link Button Texture.png"
-dest_files=[ "res://.import/Link Button Texture.png-03d087daf55f64507c8c500870d749af.stex" ]
+source_file="res://Textures/BG Borders Texture.png"
+dest_files=[ "res://.import/BG Borders Texture.png-bc1c1721512904ba37ea2ca69dd72155.stex" ]
 
 [params]
 

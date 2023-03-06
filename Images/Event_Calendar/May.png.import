@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mountains.jpg-6d58f58a93ecaccfb078ae034ed150b1.stex"
+path="res://.import/May.png-7d3b8e23414b36117e1c766cf4d75c28.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Mountains.jpg"
-dest_files=[ "res://.import/Mountains.jpg-6d58f58a93ecaccfb078ae034ed150b1.stex" ]
+source_file="res://Images/Event_Calendar/May.png"
+dest_files=[ "res://.import/May.png-7d3b8e23414b36117e1c766cf4d75c28.stex" ]
 
 [params]
 
