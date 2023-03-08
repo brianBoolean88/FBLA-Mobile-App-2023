@@ -1,0 +1,875 @@
+[gd_scene load_steps=59 format=2]
+
+[ext_resource path="res://Fonts/Groteskly Yours - Resist Sans Display Medium Oblique.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Events.gd" type="Script" id=2]
+[ext_resource path="res://Textures/mask_texture.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Subtitle.gd" type="Script" id=4]
+[ext_resource path="res://Textures/Website Buttons.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/FBLA Website.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Calendar.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/MonthStart.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/ERHS Website.gd" type="Script" id=9]
+[ext_resource path="res://Fonts/GolosText-VariableFont_wght.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Scripts/Event_buttons.gd" type="Script" id=11]
+[ext_resource path="res://Textures/Background Gradient Texture.png" type="Texture" id=12]
+[ext_resource path="res://Fonts/MotionControl-Bold.otf" type="DynamicFontData" id=13]
+[ext_resource path="res://Scripts/Confirm_Info.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/Upcoming_Events.gd" type="Script" id=15]
+[ext_resource path="res://Images/App_Icons/Home Icon.png" type="Texture" id=16]
+[ext_resource path="res://Images/App_Icons/Email Icon.png" type="Texture" id=17]
+[ext_resource path="res://Images/App_Icons/Info Icon.png" type="Texture" id=18]
+[ext_resource path="res://Scripts/Hotbar_Swap.gd" type="Script" id=19]
+[ext_resource path="res://Scripts/Teacher_Finder.gd" type="Script" id=21]
+
+[sub_resource type="Image" id=154]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 161, 238, 170, 0, 164, 238, 171, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 164, 238, 171, 0, 161, 238, 170, 0, 0, 0, 0, 0, 161, 238, 170, 0, 161, 238, 170, 60, 164, 238, 171, 202, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 201, 161, 238, 170, 60, 161, 238, 170, 0, 164, 238, 170, 0, 164, 238, 170, 200, 165, 239, 172, 255, 164, 238, 171, 247, 163, 235, 168, 53, 164, 237, 168, 59, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 79, 162, 237, 170, 72, 164, 238, 171, 247, 165, 239, 172, 255, 164, 238, 171, 199, 164, 238, 171, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 163, 237, 170, 117, 143, 220, 169, 0, 164, 238, 170, 45, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 160, 236, 170, 54, 142, 220, 170, 0, 163, 237, 170, 117, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 164, 238, 171, 199, 85, 170, 170, 3, 85, 170, 170, 3, 164, 238, 171, 198, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 198, 85, 170, 170, 3, 85, 170, 170, 3, 164, 238, 171, 199, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 161, 237, 170, 57, 136, 214, 170, 0, 164, 237, 170, 115, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 237, 170, 115, 137, 215, 170, 0, 164, 238, 170, 45, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 161, 237, 170, 57, 136, 214, 170, 0, 163, 237, 170, 117, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 237, 171, 116, 137, 215, 170, 0, 164, 238, 170, 45, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 164, 238, 171, 198, 85, 170, 170, 3, 85, 170, 170, 3, 164, 238, 171, 199, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 199, 85, 170, 170, 3, 85, 170, 170, 3, 164, 238, 171, 198, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 164, 237, 170, 115, 142, 220, 170, 0, 160, 236, 170, 54, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 160, 236, 170, 54, 142, 220, 170, 0, 164, 237, 170, 115, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 164, 238, 170, 0, 164, 238, 170, 200, 165, 239, 172, 255, 164, 238, 171, 246, 162, 237, 170, 72, 162, 235, 168, 80, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 162, 235, 168, 80, 162, 237, 170, 72, 164, 238, 171, 246, 165, 239, 172, 255, 164, 238, 170, 200, 164, 238, 170, 0, 161, 238, 170, 0, 161, 238, 170, 60, 164, 238, 171, 202, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 202, 161, 238, 170, 60, 161, 238, 170, 0, 0, 0, 0, 0, 161, 238, 170, 0, 164, 238, 171, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 164, 238, 171, 0, 161, 238, 170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=20]
+flags = 0
+flags = 0
+image = SubResource( 154 )
+size = Vector2( 16, 16 )
+
+[sub_resource type="Image" id=155]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 161, 238, 170, 0, 164, 238, 171, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 164, 238, 171, 0, 161, 238, 170, 0, 0, 0, 0, 0, 161, 238, 170, 0, 161, 238, 170, 60, 164, 238, 171, 201, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 201, 161, 238, 170, 60, 161, 238, 170, 0, 164, 238, 171, 0, 164, 238, 171, 199, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 199, 164, 238, 171, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 164, 238, 171, 0, 164, 238, 171, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 163, 238, 170, 0, 163, 238, 171, 125, 163, 238, 171, 125, 163, 238, 170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 0, 0, 0, 0, 163, 238, 170, 0, 164, 238, 170, 124, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 170, 124, 163, 238, 170, 0, 0, 0, 0, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 163, 238, 170, 0, 163, 238, 171, 125, 163, 238, 170, 0, 165, 239, 172, 0, 165, 239, 172, 0, 163, 238, 170, 0, 163, 238, 171, 125, 163, 238, 170, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 0, 164, 238, 170, 124, 165, 239, 172, 255, 165, 239, 172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 165, 239, 172, 0, 165, 239, 172, 255, 164, 238, 170, 124, 164, 238, 171, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 0, 163, 238, 171, 125, 165, 239, 172, 255, 165, 239, 172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 165, 239, 172, 0, 165, 239, 172, 255, 163, 238, 171, 125, 164, 238, 171, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 163, 238, 170, 0, 163, 238, 170, 126, 163, 238, 170, 0, 165, 239, 172, 0, 165, 239, 172, 0, 163, 238, 170, 0, 163, 238, 170, 126, 163, 238, 170, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 0, 0, 0, 0, 163, 238, 170, 0, 163, 238, 171, 125, 165, 239, 172, 255, 165, 239, 172, 255, 163, 238, 171, 125, 163, 238, 170, 0, 0, 0, 0, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 163, 238, 170, 0, 163, 238, 170, 126, 163, 238, 170, 126, 163, 238, 170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 164, 238, 171, 0, 164, 238, 171, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 0, 164, 238, 170, 0, 164, 238, 170, 200, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 170, 200, 164, 238, 170, 0, 161, 238, 170, 0, 161, 238, 170, 60, 164, 238, 171, 202, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 165, 239, 172, 255, 164, 238, 171, 201, 161, 238, 170, 60, 161, 238, 170, 0, 0, 0, 0, 0, 161, 238, 170, 0, 164, 238, 171, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 165, 239, 172, 0, 164, 238, 171, 0, 161, 238, 170, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=22]
+flags = 0
+flags = 0
+image = SubResource( 155 )
+size = Vector2( 16, 16 )
+
+[sub_resource type="ImageTexture" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=120]
+
+[sub_resource type="StyleBoxEmpty" id=121]
+
+[sub_resource type="StyleBoxEmpty" id=122]
+
+[sub_resource type="StyleBoxEmpty" id=32]
+
+[sub_resource type="StyleBoxEmpty" id=123]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="ImageTexture" id=71]
+
+[sub_resource type="StyleBoxEmpty" id=113]
+
+[sub_resource type="StyleBoxEmpty" id=114]
+
+[sub_resource type="StyleBoxEmpty" id=115]
+
+[sub_resource type="StyleBoxEmpty" id=81]
+
+[sub_resource type="StyleBoxEmpty" id=116]
+
+[sub_resource type="Theme" id=36]
+/colors/ScrollContainer = Color( 1, 1, 1, 1 )
+EditorIcons/icons/HScrollBar = SubResource( 20 )
+EditorIcons/icons/ScrollContainer = SubResource( 22 )
+HScrollBar/icons/decrement = SubResource( 9 )
+HScrollBar/icons/decrement_highlight = SubResource( 9 )
+HScrollBar/icons/decrement_pressed = SubResource( 9 )
+HScrollBar/icons/increment = SubResource( 9 )
+HScrollBar/icons/increment_highlight = SubResource( 9 )
+HScrollBar/icons/increment_pressed = SubResource( 9 )
+HScrollBar/styles/grabber = SubResource( 120 )
+HScrollBar/styles/grabber_highlight = SubResource( 121 )
+HScrollBar/styles/grabber_pressed = SubResource( 122 )
+HScrollBar/styles/scroll = SubResource( 32 )
+HScrollBar/styles/scroll_focus = SubResource( 123 )
+ScrollContainer/styles/bg = SubResource( 16 )
+VScrollBar/icons/decrement = SubResource( 71 )
+VScrollBar/icons/decrement_highlight = SubResource( 71 )
+VScrollBar/icons/decrement_pressed = SubResource( 71 )
+VScrollBar/icons/increment = SubResource( 71 )
+VScrollBar/icons/increment_highlight = SubResource( 71 )
+VScrollBar/icons/increment_pressed = SubResource( 71 )
+VScrollBar/styles/grabber = SubResource( 113 )
+VScrollBar/styles/grabber_highlight = SubResource( 114 )
+VScrollBar/styles/grabber_pressed = SubResource( 115 )
+VScrollBar/styles/scroll = SubResource( 81 )
+VScrollBar/styles/scroll_focus = SubResource( 116 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 37
+font_data = ExtResource( 13 )
+
+[sub_resource type="CanvasItemMaterial" id=117]
+
+[sub_resource type="DynamicFont" id=126]
+size = 21
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=50]
+
+[sub_resource type="Theme" id=18]
+
+[sub_resource type="DynamicFont" id=43]
+size = 14
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=95]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=106]
+size = 11
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=129]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=64]
+size = 36
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=135]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=153]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="Theme" id=148]
+
+[sub_resource type="DynamicFont" id=149]
+size = 23
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=150]
+bg_color = Color( 0.486275, 0.67451, 0.988235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=132]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=145]
+size = 25
+font_data = ExtResource( 13 )
+
+[sub_resource type="Animation" id=138]
+resource_name = "BackgroundFade"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.658824 ) ]
+}
+
+[sub_resource type="Animation" id=139]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 64, 149 ) ]
+}
+
+[sub_resource type="Animation" id=142]
+resource_name = "ShowInfo"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 64, 1050 ), Vector2( 64, 150 ) ]
+}
+
+[node name="Main" type="Control"]
+margin_right = 574.0
+margin_bottom = 1024.0
+theme = SubResource( 36 )
+
+[node name="Background" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -287.0
+margin_top = -512.0
+margin_right = 289.0
+margin_bottom = 512.0
+rect_min_size = Vector2( 576, 1024 )
+texture = ExtResource( 12 )
+region_rect = Rect2( -13, 2, 571, 1018 )
+patch_margin_left = 483
+patch_margin_top = 24
+patch_margin_right = 103
+patch_margin_bottom = 56
+
+[node name="MainScroll" type="ScrollContainer" parent="Background"]
+margin_left = 1.0
+margin_right = 585.0
+margin_bottom = 1025.0
+scroll_horizontal_enabled = false
+
+[node name="VBOX" type="VBoxContainer" parent="Background/MainScroll"]
+margin_right = 576.0
+margin_bottom = 2090.0
+custom_constants/separation = 12
+alignment = 1
+
+[node name="Title" type="Label" parent="Background/MainScroll/VBOX"]
+margin_right = 576.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 5 )
+text = "FBLA+
+CONNECT"
+valign = 1
+
+[node name="TitleBorder" type="Panel" parent="Background/MainScroll/VBOX/Title"]
+modulate = Color( 0, 0.0705882, 0.356863, 1 )
+show_behind_parent = true
+material = SubResource( 117 )
+margin_left = -4.0
+margin_top = 1.0
+margin_right = 587.0
+margin_bottom = 74.0
+
+[node name="Subtitle" type="Label" parent="Background/MainScroll/VBOX/Title"]
+margin_top = 25.0
+margin_right = 542.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 126 )
+text = "2023"
+align = 2
+valign = 1
+script = ExtResource( 4 )
+
+[node name="UpcomingEvents" type="TextureRect" parent="Background/MainScroll/VBOX"]
+margin_top = 91.0
+margin_right = 576.0
+margin_bottom = 391.0
+rect_min_size = Vector2( 576, 300 )
+
+[node name="UpcomingBorder" type="Panel" parent="Background/MainScroll/VBOX/UpcomingEvents"]
+self_modulate = Color( 0, 0.0862745, 0.482353, 1 )
+material = SubResource( 117 )
+margin_left = 14.0
+margin_top = 33.0
+margin_right = 562.0
+margin_bottom = 271.0
+
+[node name="Scroll" type="ScrollContainer" parent="Background/MainScroll/VBOX/UpcomingEvents/UpcomingBorder"]
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -100.0
+margin_right = 250.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 500, 200 )
+custom_styles/bg = SubResource( 50 )
+follow_focus = true
+scroll_vertical_enabled = false
+
+[node name="Horiz" type="HBoxContainer" parent="Background/MainScroll/VBOX/UpcomingEvents/UpcomingBorder/Scroll"]
+margin_right = 500.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 500, 200 )
+theme = SubResource( 18 )
+custom_constants/separation = 22
+script = ExtResource( 15 )
+
+[node name="Template" type="TextureButton" parent="Background/MainScroll/VBOX/UpcomingEvents/UpcomingBorder/Scroll/Horiz"]
+margin_right = 170.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 170, 200 )
+texture_normal = ExtResource( 3 )
+script = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="Background/MainScroll/VBOX/UpcomingEvents/UpcomingBorder/Scroll/Horiz/Template"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.0
+margin_top = -40.5
+margin_right = 87.0
+margin_bottom = 40.5
+rect_min_size = Vector2( 100, 35 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 43 )
+text = "Loading.."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Background/MainScroll/VBOX/UpcomingEvents/UpcomingBorder/Scroll/Horiz"]
+
+[node name="Calendars" type="TextureRect" parent="Background/MainScroll/VBOX"]
+margin_top = 403.0
+margin_right = 576.0
+margin_bottom = 1003.0
+rect_min_size = Vector2( 576, 600 )
+
+[node name="Calendars" type="Panel" parent="Background/MainScroll/VBOX/Calendars"]
+self_modulate = Color( 0, 0.0862745, 0.482353, 1 )
+material = SubResource( 117 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -274.0
+margin_top = -300.0
+margin_right = 274.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 548, 600 )
+
+[node name="Notice" type="Label" parent="Background/MainScroll/VBOX/Calendars/Calendars"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -288.0
+margin_right = 288.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 522, 50 )
+custom_fonts/font = SubResource( 95 )
+text = "MARCH CALENDARS"
+align = 1
+valign = 1
+
+[node name="Calendar" type="TextureRect" parent="Background/MainScroll/VBOX/Calendars/Calendars"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -261.0
+margin_top = 13.0
+margin_right = 261.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 522, 300 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 7 )
+
+[node name="Calendar2" type="TextureRect" parent="Background/MainScroll/VBOX/Calendars/Calendars"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -261.0
+margin_top = -319.0
+margin_right = 261.0
+rect_min_size = Vector2( 522, 300 )
+expand = true
+stretch_mode = 6
+
+[node name="MonthStart" type="Label" parent="Background/MainScroll/VBOX"]
+margin_top = 1015.0
+margin_right = 576.0
+margin_bottom = 1135.0
+custom_fonts/font = SubResource( 5 )
+text = "
+
+No Events This Month..."
+align = 1
+valign = 2
+autowrap = true
+script = ExtResource( 8 )
+
+[node name="MonthCells" type="TextureRect" parent="Background/MainScroll/VBOX"]
+margin_top = 1147.0
+margin_right = 576.0
+margin_bottom = 1647.0
+rect_min_size = Vector2( 576, 500 )
+
+[node name="Back" type="Panel" parent="Background/MainScroll/VBOX/MonthCells"]
+self_modulate = Color( 0, 0.0862745, 0.482353, 1 )
+material = SubResource( 117 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -274.0
+margin_top = -250.0
+margin_right = 274.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 548, 500 )
+
+[node name="Calendar3" type="TextureRect" parent="Background/MainScroll/VBOX/MonthCells/Back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -261.0
+margin_top = -250.0
+margin_right = 261.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 522, 500 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 2 )
+
+[node name="InvisButton" type="Button" parent="Background/MainScroll/VBOX/MonthCells/Back/Calendar3"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.5
+margin_top = -250.0
+margin_right = 267.5
+margin_bottom = 250.0
+rect_min_size = Vector2( 500, 500 )
+
+[node name="LineBreak2" type="Label" parent="Background/MainScroll/VBOX"]
+margin_top = 1659.0
+margin_right = 576.0
+margin_bottom = 1779.0
+custom_fonts/font = SubResource( 5 )
+text = "
+
+"
+valign = 1
+
+[node name="Websites" type="TextureRect" parent="Background/MainScroll/VBOX"]
+margin_top = 1791.0
+margin_right = 576.0
+margin_bottom = 1916.0
+rect_min_size = Vector2( 576, 125 )
+
+[node name="FBLA Website" type="TextureButton" parent="Background/MainScroll/VBOX/Websites"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -288.0
+margin_right = 288.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 576, 50 )
+texture_normal = ExtResource( 5 )
+expand = true
+script = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Background/MainScroll/VBOX/Websites/FBLA Website"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.0
+margin_top = -40.5
+margin_right = 111.0
+margin_bottom = 40.5
+rect_min_size = Vector2( 100, 35 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 43 )
+text = "FBLA WEBSITE"
+align = 1
+valign = 1
+
+[node name="ERHS Website" type="TextureButton" parent="Background/MainScroll/VBOX/Websites"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -288.0
+margin_top = -50.0
+margin_right = 288.0
+rect_min_size = Vector2( 576, 50 )
+texture_normal = ExtResource( 5 )
+expand = true
+script = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Background/MainScroll/VBOX/Websites/ERHS Website"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.0
+margin_top = -40.5
+margin_right = 111.0
+margin_bottom = 40.5
+rect_min_size = Vector2( 100, 35 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 43 )
+text = "ERHS WEBSITE"
+align = 1
+valign = 1
+
+[node name="Terms2" type="TextureRect" parent="Background/MainScroll/VBOX"]
+margin_top = 1928.0
+margin_right = 576.0
+margin_bottom = 2028.0
+rect_min_size = Vector2( 576, 100 )
+
+[node name="Email" type="Label" parent="Background/MainScroll/VBOX/Terms2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -288.0
+margin_right = 288.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 522, 50 )
+custom_fonts/font = SubResource( 106 )
+text = "Brian: 88brianw@gmail.com
+Rudra: rudra.h.patel2007@gmail.com
+Saanvi: saanvi.s.nukala@gmail.com"
+align = 1
+valign = 1
+
+[node name="Terms" type="TextureButton" parent="Background/MainScroll/VBOX/Terms2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -25.0
+margin_right = 150.0
+rect_min_size = Vector2( 300, 25 )
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="Background/MainScroll/VBOX/Terms2/Terms"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -151.5
+margin_top = -40.5
+margin_right = 151.5
+margin_bottom = 40.5
+rect_min_size = Vector2( 100, 35 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 129 )
+text = "Terms and Conditions"
+align = 1
+valign = 1
+
+[node name="LineBreak3" type="Label" parent="Background/MainScroll/VBOX"]
+margin_top = 2040.0
+margin_right = 576.0
+margin_bottom = 2090.0
+rect_min_size = Vector2( 522, 50 )
+custom_fonts/font = SubResource( 64 )
+align = 1
+valign = 1
+
+[node name="InformationPage" type="Panel" parent="Background"]
+visible = false
+self_modulate = Color( 0, 0, 0, 0.533333 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -295.0
+margin_top = -512.0
+margin_right = 295.0
+margin_bottom = 512.0
+rect_scale = Vector2( 1.00578, 1 )
+custom_styles/panel = SubResource( 135 )
+
+[node name="Description" type="Label" parent="Background/InformationPage"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -248.0
+margin_top = -489.0
+margin_right = 245.0
+margin_bottom = 417.0
+custom_fonts/font = SubResource( 5 )
+text = "FBLA Connect+
+This app was created as a project for the Mobile App Development category under FBLA.
+
+The developers are:
+Brian Wang:  Programmer
+- 88brianw@gmail.com
+Rudra: Icon and UI Designer
+- rudra.h.patel2007@gmail.com
+Saanvi: Information Designer
+- saanvi.s.nukala@gmail.com
+
+This is a news app dedicated to providing insight on new information being posted around the school and in FBLA. Every calendar is shown here, and the development team is constantly reposting information.
+
+Please enjoy your time here."
+align = 1
+autowrap = true
+
+[node name="EmailPage" type="Panel" parent="Background"]
+visible = false
+self_modulate = Color( 0.145098, 0.254902, 0.443137, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -295.0
+margin_top = -512.0
+margin_right = 295.0
+margin_bottom = 512.0
+rect_scale = Vector2( 1.00578, 1 )
+custom_styles/panel = SubResource( 135 )
+
+[node name="Send" type="TextureButton" parent="Background/EmailPage"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.834
+margin_top = -124.0
+margin_right = 149.166
+margin_bottom = -99.0
+rect_min_size = Vector2( 300, 25 )
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="Background/EmailPage/Send"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -151.5
+margin_top = -40.5
+margin_right = 151.5
+margin_bottom = 40.5
+rect_min_size = Vector2( 100, 35 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 129 )
+text = "SEND"
+align = 1
+valign = 1
+
+[node name="TeacherConfirm" type="TextureButton" parent="Background/EmailPage"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -153.5
+margin_top = -12.5
+margin_right = 153.5
+margin_bottom = 12.5
+rect_min_size = Vector2( 300, 25 )
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="Background/EmailPage/TeacherConfirm"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -10.0
+margin_right = 150.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 300, 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 129 )
+text = "TEACHER FINDER"
+valign = 1
+
+[node name="Note" type="Label" parent="Background/EmailPage/TeacherConfirm"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -153.816
+margin_top = -37.0
+margin_right = 146.184
+margin_bottom = -17.0
+rect_min_size = Vector2( 300, 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 153 )
+text = "Last Name, First Name"
+valign = 1
+
+[node name="Teacher" type="TextEdit" parent="Background/EmailPage"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -237.333
+margin_top = -86.0
+margin_right = 239.667
+margin_bottom = -53.0
+theme = SubResource( 148 )
+custom_fonts/font = SubResource( 149 )
+custom_styles/normal = SubResource( 150 )
+text = "Loading..."
+script = ExtResource( 21 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Background/EmailPage/Teacher"]
+
+[node name="Hotbar" type="Panel" parent="Background"]
+self_modulate = Color( 0, 0.0196078, 0.0941176, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -298.0
+margin_top = -58.0
+margin_right = 330.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.953204, 0.813398 )
+custom_styles/panel = SubResource( 132 )
+script = ExtResource( 19 )
+
+[node name="Home" type="TextureButton" parent="Background/Hotbar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -212.238
+margin_top = -32.6235
+margin_right = -152.238
+margin_bottom = 27.3765
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 16 )
+
+[node name="Email" type="TextureButton" parent="Background/Hotbar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -30.0
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 17 )
+
+[node name="Info" type="TextureButton" parent="Background/Hotbar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 133.0
+margin_top = -31.0
+margin_right = 193.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 18 )
+
+[node name="BG" type="Panel" parent="Background"]
+visible = false
+self_modulate = Color( 0, 0, 0, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -295.0
+margin_top = -512.0
+margin_right = 295.0
+margin_bottom = 512.0
+rect_scale = Vector2( 1.00578, 1 )
+custom_styles/panel = SubResource( 135 )
+
+[node name="Info" type="Panel" parent="Background"]
+visible = false
+self_modulate = Color( 0.168627, 0.439216, 0.819608, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -229.0
+margin_top = -363.0
+margin_right = 229.0
+margin_bottom = -175.0
+custom_styles/panel = SubResource( 132 )
+
+[node name="Text" type="Label" parent="Background/Info"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -174.0
+margin_top = -323.0
+margin_right = 174.0
+margin_bottom = 323.0
+custom_fonts/font = SubResource( 145 )
+text = "Name: Event Name
+Date: ....
+
+Description: dsfsfdasflkjdflkajsdfldakfjklfadlskjfdalskfjdaslfkdajfadlkfjadlfkdfjssflkfjadslkfjasdlfkajsdfdlsakfjdaslkfjdasfldaskj
+
+
+"
+align = 1
+autowrap = true
+
+[node name="OK" type="TextureButton" parent="Background/Info"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -41.657
+margin_right = 150.0
+margin_bottom = -16.657
+rect_min_size = Vector2( 300, 25 )
+texture_normal = ExtResource( 5 )
+expand = true
+script = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Background/Info/OK"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -151.5
+margin_top = -40.5
+margin_right = 151.5
+margin_bottom = 40.5
+rect_min_size = Vector2( 100, 35 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 129 )
+text = "OK"
+align = 1
+valign = 1
+
+[node name="Transitions" type="AnimationPlayer" parent="Background/Info"]
+anims/BackgroundFade = SubResource( 138 )
+anims/RESET = SubResource( 139 )
+anims/ShowInfo = SubResource( 142 )
+
+[connection signal="pressed" from="Background/MainScroll/VBOX/UpcomingEvents/UpcomingBorder/Scroll/Horiz/Template" to="Background/MainScroll/VBOX/UpcomingEvents/UpcomingBorder/Scroll/Horiz/Template" method="_on_Template_pressed"]
+[connection signal="pressed" from="Background/MainScroll/VBOX/Websites/FBLA Website" to="Background/MainScroll/VBOX/Websites/FBLA Website" method="_on_FBLA_Website_pressed"]
+[connection signal="pressed" from="Background/MainScroll/VBOX/Websites/ERHS Website" to="Background/MainScroll/VBOX/Websites/ERHS Website" method="_on_ERHS_Website_pressed"]
+[connection signal="pressed" from="Background/MainScroll/VBOX/Terms2/Terms" to="Background/Info/OK" method="_on_Terms_pressed"]
+[connection signal="pressed" from="Background/EmailPage/Send" to="Background/EmailPage/Teacher" method="_on_Send_pressed"]
+[connection signal="pressed" from="Background/EmailPage/TeacherConfirm" to="Background/EmailPage/Teacher" method="_on_TeacherConfirm_pressed"]
+[connection signal="focus_entered" from="Background/EmailPage/Teacher" to="Background/EmailPage/Teacher" method="_on_Teacher_focus_entered"]
+[connection signal="text_changed" from="Background/EmailPage/Teacher" to="Background/EmailPage/Teacher" method="_on_Teacher_text_changed"]
+[connection signal="pressed" from="Background/Hotbar/Home" to="Background/Hotbar" method="_on_Home_pressed"]
+[connection signal="pressed" from="Background/Hotbar/Email" to="Background/Hotbar" method="_on_Email_pressed"]
+[connection signal="pressed" from="Background/Hotbar/Info" to="Background/Hotbar" method="_on_Info_pressed"]
+[connection signal="pressed" from="Background/Info/OK" to="Background/Info/OK" method="_on_OK_pressed"]

@@ -15,8 +15,8 @@ func _ready():
 
 	var dict = Time.get_date_dict_from_system()
 	var m = month[dict.month-1]
-	var loadPath = "res://Images/FBLA_Calendar/" + m + ".png"
-	var loadPath2 = "res://Images/ERHS_Calendar/" + m + ".png"
+	var loadPath = "res://Images/FBLACalendar/" + m + ".png"
+	var loadPath2 = "res://Images/ERHSCalendar/" + m + ".png"
 
 	var dir = File.new();
 	var exists = dir.file_exists(loadPath)

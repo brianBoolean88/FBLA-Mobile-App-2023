@@ -18,11 +18,17 @@ var headers = [
 	"user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
 ]
 
-var data = '{"portletInstanceId":"139873","primaryCalendarId":"1382798","calendarIds":["1382798"],"localFromDate":"2023-02-10T08:00:00.000Z","localToDate":"2023-06-26T06:59:59.999Z","filterFieldValue":"","searchText":"","categoryFieldValue":"","filterOptions":[]}'
+var data = '{"portletInstanceId":"139873","primaryCalendarId":"1382798","calendarIds":["1382798"],"localFromDate":"2023-03-6T08:00:00.000Z","localToDate":"2023-06-26T06:59:59.999Z","filterFieldValue":"","searchText":"","categoryFieldValue":"","filterOptions":[]}'
 
 var url = "https://roosevelt.cnusd.k12.ca.us/Common/controls/WorkspaceCalendar/ws/WorkspaceCalendarWS.asmx/Modern_Events"
 
 var use_ssl = true
+
+var FBLAEvents = [
+	'National Dues Payment',
+	'CTE Celebration Submissions Due',
+	'Spring Stock Market Game Registration Deadline',
+]
 
 func _ready():
 	httpr.connect("request_completed", self, "_on_request_completed")
@@ -39,6 +45,15 @@ func _on_request_completed(_result, response_code, _headers, body):
 
 	var dict = json.result
 
+	for i in FBLAEvents:
+		if label.text == "Loading..":
+			label.text = i
+		else:
+			var newNode = temp.duplicate()
+			var label2 = newNode.get_node("Label")
+			label2.text = i
+			self.add_child(newNode)
+
 	for i in dict['d']["events"]:
 		if label.text == "Loading..":
 			label.text = i.name
@@ -47,5 +62,4 @@ func _on_request_completed(_result, response_code, _headers, body):
 			var label2 = newNode.get_node("Label")
 			label2.text = i.name
 			self.add_child(newNode)
-	
 	

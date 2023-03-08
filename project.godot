@@ -20,9 +20,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="FBLA Mobile App"
+config/name="FBLA Connect+"
+config/description="Get your latest updates from FBLA Connect+
+Find teachers in a search-to-database fashion...
+Get upcoming updates dynamically and live 24/7!
+Organize your schedules with the calendars."
 run/main_scene="res://WorldScene.tscn"
-config/icon="res://icon.png"
+config/icon="res://Images/AppIcons/Official Icon.png"
 
 [display]
 
@@ -57,4 +61,4 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 2d/snapping/use_gpu_pixel_snap=true
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://defaultenv.tres"
