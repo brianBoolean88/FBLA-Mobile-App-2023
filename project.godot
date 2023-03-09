@@ -49,6 +49,8 @@ pixel=false
 "pixel snap"=false
 window=false
 display=false
+default=false
+scene=false
 
 [gui]
 
