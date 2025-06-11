@@ -1,173 +1,99 @@
-# 👨‍🍳 ChefLens: AI-Powered Cooking Assistant  
+# 📱 FBLA Connect+
 
-ChefLens is a Flutter mobile application that uses AI to analyze photos of your ingredients and generate personalized recipe suggestions along with nutritional information. The app is built with Dart using Flutter in Visual Studio Code and connects to a continuation project called **Food Image AI Predictor**, powered by Google Colab and trained on the **Fruit Classification Dataset** (22k images) by Edward Zhang.
-
----
-
-## 📱 Introduction
-
-**ChefLens** is designed to help users, especially amateur cooks and college students, prepare nutritious meals from the ingredients they have on hand. By leveraging computer vision and machine learning, the app identifies ingredients in user-submitted photos and recommends suitable recipes with detailed nutritional breakdowns.
+**An app to bridge communication between students, schools, and FBLA chapters.**  
+Created using **Godot 3.0** and **GDScript**  
+👤 Developed by: Brian Wang
 
 ---
 
-## ❗ Problem Statement
+## 📖 Overview
 
-Many people struggle with meal planning based on the ingredients they have, especially:
-- College students with limited ingredients and experience.
-- Busy individuals without time to search for recipes.
-- Families trying to eat healthy on a budget.
+**FBLA Connect+** is a desktop/mobile app built to simplify and centralize access to high school and FBLA-related updates. By combining useful school and club features into one place, it improves engagement and accessibility for students.
 
-Currently available apps are either paywalled, overly complex, or have poor UI/UX. ChefLens addresses this by offering:
-- A **free and AI-driven** recipe generation tool.
-- Intuitive and clean user interface.
-- Nutritional and dietary customization options.
+The app was built with **Godot 3.0**, a lightweight and open-source game engine using **GDScript**. It was created to demonstrate technical skill and solve a real problem in student information access.
 
 ---
 
-## 🎯 Target Audience
+## 🎯 Purpose & Problem Solving
 
-- **College students**
-- **Amateur cooks**
-- **Time-constrained individuals**
-- **Budget-conscious families**
-- **Health-focused users**
+### 📌 Why FBLA Connect+?
 
-ChefLens is ideal for anyone looking to make smarter, healthier meal choices with minimal effort.
+School websites and FBLA chapter pages often:
+- Lack immediate scheduling visibility
+- Are hard to navigate or outdated
+- Require users to check multiple sources
 
----
-
-## 💡 Solution Overview
-
-ChefLens works in two main stages:
-
-1. **Image Ingredient Detection**
-   - Users snap a photo of their available ingredients.
-   - Images are sent to a machine learning backend (Google Colab model).
-   - The model classifies and returns identified ingredients.
-
-2. **AI-Generated Recipe & Nutrition Info**
-   - The app suggests recipes sorted by user preferences:
-     - Calories, protein, carbohydrates, fats
-     - Vitamins, minerals, fiber, allergens
-     - Cooking time & difficulty level
-   - Each recipe includes step-by-step instructions and optional tutorial videos.
+**FBLA Connect+** addresses these problems by:
+- Providing real-time updates in-app
+- Embedding school and FBLA information
+- Enabling dynamic UI for events and announcements
 
 ---
 
-## 🔍 Unique Value Proposition
+## 🌟 Key Features
 
-- **Completely free** to use — no features hidden behind paywalls.
-- **Accurate ingredient detection** via trained AI model (22k image dataset).
-- **High-quality UI/UX** built using Flutter, designed for simplicity and speed.
-- **No locked AI tiers** — all users access the best prediction model.
-- **Health-first advertising** — no fast food or junk food ads allowed.
-
----
-
-## 💰 Revenue Model
-
-ChefLens will remain free to use, monetized via:
-- **Non-intrusive ads** (e.g., watch ad to unlock recipe).
-- **Sponsored content** from health-oriented brands.
-- **Optional donations** from satisfied users.
-
-We are committed to keeping the user experience clean, ethical, and educational.
+- 🗓️ Embedded FBLA and school calendars  
+- 🔔 Push-style dynamic updates (scraped and parsed)  
+- 🧑‍🏫 Teacher contact integration (scrapes contact data)  
+- 📡 HTTP request-based syncing from school/Future Business Leaders websites  
+- 🎨 Built-in UI with custom GIMP-designed assets  
+- 🔄 More features planned via live collaboration with official FBLA developers
 
 ---
 
-## 🧠 Tech Stack
+## 💻 Tech Stack
 
-| Component       | Technology                  |
-|----------------|-----------------------------|
-| **Frontend**    | Flutter (Dart)              |
-| **IDE**         | Visual Studio Code          |
-| **AI Backend**  | Google Colab (Python)       |
-| **Dataset**     | Fruit Classification Dataset by Edward Zhang |
-| **Image Model** | CNN model trained on 22k labeled images |
-
----
-
-## 🤝 Team Strength
-
-Our team brings a diverse blend of **technical, business, and communication skills**:
-
-- 🧑‍💻 **Programming**: Extensive experience through side projects, USACO (Silver), and app competitions.
-- 🧑‍🏫 **Business & Marketing**: 2+ years of FBLA participation with multiple awards.
-- ✍️ **Writing & Presentation**: Strong ability to pitch, document, and communicate project value.
-- 🤝 **Teamwork**: Clear communication, version control, and mutual support in all stages of development.
+| Component     | Details                         |
+|---------------|----------------------------------|
+| Engine        | Godot 3.0                        |
+| Language      | GDScript                         |
+| Networking    | HTTP requests, POST data scraping |
+| UI/UX         | First-time UI made in Godot + GIMP |
+| Data Sources  | ERHS Calendar (sub-branch), FBLA team site (under development) |
 
 ---
 
-## 🏆 Awards & Recognition
+## 🛠️ Installation Guide
 
-- 🥇 1st and 2nd place – **Congressional App Challenge**
-- 🥉 3rd place (2x) – **IgniteCS Programming Expo**
-- 🏅 FBLA Award Winners – **Mobile App Design**, **Intro to IT**
-- 🎖️ Advanced to **USACO Silver Division**
+### 📥 Prerequisites
 
----
-
-## 🔬 Supporting Project: Food Image AI Predictor
-
-The **Food Image AI Predictor** is a continuation of ChefLens’s ingredient detection system:
-
-- Built in **Google Colab** using **TensorFlow/Keras**
-- Trained on the **Fruit Classification Dataset** (22,000 images)
-- Fine-tuned CNN model outputs ingredient predictions from photos
-- Outputs are returned to the Flutter app for recipe generation
+- **Godot Engine 3.0**: [Download here](https://godotengine.org/download/archive)
+- Windows/Mac/Linux system or Android phone (if exported)
 
 ---
 
-## 🚧 Future Plans
+### 📦 Installation Steps (Godot Project)
 
-- Expand dataset to include vegetables, grains, meats, and spices
-- Add barcode scanning for packaged ingredients
-- Integrate user meal logging and historical nutrition tracking
-- Partner with grocery chains for real-time ingredient pricing
-
----
-
-## 📎 Contact & Contributions
-
-ChefLens is open to collaboration and partnership. For inquiries or contributions, please reach out via our competition submission channels or GitHub (to be linked).
-
----
-
-## 🛠️ Installation & Setup
-
-### 📦 Prerequisites
-
-- [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- [Dart SDK](https://dart.dev/get-dart) (included with Flutter)
-- [Android Studio](https://developer.android.com/studio) or Xcode (macOS) --> for virtual device if needed
-- [VS Code](https://code.visualstudio.com/) with Flutter & Dart extensions
-- Git CLI
-- Device/emulator for testing
-
-### 📥 Installation Steps
+#### 1. Clone or Download the Project
 
 ```bash
-git clone https://github.com/brianBoolean88/FBLA-Mobile-App-2023.git
-cd FBLA-Mobile-App-2023
-flutter pub get
+git clone https://github.com/yourusername/fbla-connect-plus.git
+cd fbla-connect-plus
 ```
-1. Clone the repository to VSCode
-2. Make sure you have all the relevant frameworks installed. There should be an android/iphone (virtual or real) device connected.
-3. Run the Flutter application (flutter run or "Run" button in VSCode)
-4. flutter build apk --release to export as APK for androids
-   - As this application was created for androids, apple iphones may need a code rewrite in XCode for this project.
-5. (Optional) run 'flutter doctor' if there are any issues
 
-Happy looking at your recipes!!! :)
+2. Open in Godot
+   - Launch Godot 3.0
+   - Click "Import"
+   - Select project.godot file inside project folder
+   - Click "Edit" to open project
+3. Run the App (F5 in the editor)
+
+--- 
+
+### 📱 (Optional) Export to Desktop or Android
+To Export:
+1. Go to Project > Export
+2. Select your target platform (e.g., Windows Desktop or Android)
+3. Set up export templates if prompted
+4. Click "Export Project" to generate the executable or APK (Note: iPhones may require XCode or some apple game engine code rewrite)
 
 ---
 
-## 📜 License & Credits
+### 📎 Credits
+Developer: Brian Wang
 
-- Fruit Dataset by Edward Zhang (used under fair use for educational purposes)
-- Built using Flutter SDK and TensorFlow
-- All components originally authored unless stated otherwise
+UI Design: Brian Wang via GIMP
 
----
+School Website Source: ERHS Subsite
 
-*Built with ❤️ by aspiring developers for a healthier, smarter, and tastier future.*
+Engine: Godot Engine
