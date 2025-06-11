@@ -133,6 +133,35 @@ ChefLens is open to collaboration and partnership. For inquiries or contribution
 
 ---
 
+## 🛠️ Installation & Setup
+
+### 📦 Prerequisites
+
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- [Dart SDK](https://dart.dev/get-dart) (included with Flutter)
+- [Android Studio](https://developer.android.com/studio) or Xcode (macOS) --> for virtual device if needed
+- [VS Code](https://code.visualstudio.com/) with Flutter & Dart extensions
+- Git CLI
+- Device/emulator for testing
+
+### 📥 Installation Steps
+
+```bash
+git clone https://github.com/brianBoolean88/FBLA-Mobile-App-2023.git
+cd FBLA-Mobile-App-2023
+flutter pub get
+```
+1. Clone the repository to VSCode
+2. Make sure you have all the relevant frameworks installed. There should be an android/iphone (virtual or real) device connected.
+3. Run the Flutter application (flutter run or "Run" button in VSCode)
+4. flutter build apk --release to export as APK for androids
+   - As this application was created for androids, apple iphones may need a code rewrite in XCode for this project.
+5. (Optional) run 'flutter doctor' if there are any issues
+
+Happy looking at your recipes!!! :)
+
+---
+
 ## 📜 License & Credits
 
 - Fruit Dataset by Edward Zhang (used under fair use for educational purposes)
